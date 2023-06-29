@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Img to PDF Converter</title>
+    <!-- PDf-Lib link -->
+    <!-- <script src="https://unpkg.com/pdf-lib"></script> -->
+    <script src="https://unpkg.com/pdf-lib@1.4.0"></script>
+
+    <!-- downloadjs unping link -->
+    <!-- <script type="text/javascript" src="https://unpkg.com/downloadjs@1.4.7/download.js"></script> -->
+    <script src="https://unpkg.com/downloadjs@1.4.7"></script>
+
+    <!-- font awesome icon link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="ImgToPdf.css">
+ 
+</head>
+<body>
+    <!-- nav bar -->
+    <center>
+    <h1>Image to PDF Converter</h1>
+    <p>Convert your PDF to WORD documents with accuracy.</p>
+</center>
+    <div class="nav">
+        <span class="logo">
+            <i class="fa fa-file-pdf-o"></i>  PDF
+        </span>
+    
+    <div>
+        <button id="convertBtn" onclick={embedImg()}>SAVE AS PDF</button>
+        <button id="upload-msg">UPLOAD FILES</button>
+    </div>
+</div>
+    <!-- <i class="fa fa-trash"></i> -->
+
+    <div class="input-page" id="input-page">
+        <div class="choose-file">
+            <div class="add-more-files">
+                <div class="inp-container">
+                    <input type="file" id="upload-file" onchange={encodeImageFileAsURL(this)} multiple accept="image/">
+                    <h4 class="drop">DRAG & DROP OR</h4>
+                    <p><i class="fa fa-file-image-o fa-4x img-icon"></i></p>
+                    <label for="upload-file" id="custom-file">CHOOSE FILES</label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- pdf page -->
+    <div class="pdf-page" id="pdf-page">
+        <div class="create-pdf" id="create-pdf">
+
+            <!-- this part of code is just to show the pdf page structure and will be removed once javaScript fill will be create -->
+            <div class="file-item">
+                <div class="modify">
+                    <button class="delete-btn">
+                        <i class="fa fa-trash"></i>\
+                    </button>
+                </div>
+                <div class="img-container">
+                    <img src="https://static.vecteezy.com/system/resources/thumbnails/017/394/920/small/sweet-strawberry-ice-cream-generative-ai-png.png" alt="img" id="img"></div>
+                <p id="img-name">img-name</p>
+            </div>
+            <div class="add-more-file">
+                <div class="inp-cont">
+                    <input type="file" id="inp" multiple accept="image/">
+                    <p><i class="fa fa-plus"></i></p>
+                    <label for="inp">Add Files</label>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="task1.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
